@@ -5,17 +5,20 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Currency_Converter_App"
         mc:Ignorable="d"
-        Title="Currency Convert" Height="350" Width="290" FontSize="14">
+
+        Title="Currency Convert" Height="600" Width="800" FontSize="14">
     <Window.Background>
         <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
             <GradientStop Color="Black" Offset="0"/>
             <GradientStop Color="White" Offset="1"/>
         </LinearGradientBrush>
     </Window.Background>
+ 
     <Grid>
-        <Button x:Name="btnSignUp" Content="Sign Up" HorizontalAlignment="Left" Margin="94,90,0,0" VerticalAlignment="Top" Width="97" Height="33" Background="#FFDDDDDD" Click="BtnSignUp_Click" />
-        <Button x:Name="btnSignIn" Content="Sign In" HorizontalAlignment="Left" Margin="94,150,0,0" VerticalAlignment="Top" Width="97" Height="33" Click="BtnSignIn_Click"/>
-        <Label x:Name="lblExchange" Content="Currency Exchange"  Width="282" FontSize="24" FontFamily="Modern No. 20" Background="LightSteelBlue" Margin="0,0,0,270" />
 
+        <Button x:Name="btnSignUp" Content="Sign Up" HorizontalAlignment="Center" Margin="94,10,0,0"  VerticalAlignment="Center" Width="100" Height="50" Background="#FFDDDDDD" Click="BtnSignUp_Click" />
+        <Button x:Name="Next" Content="Next" HorizontalAlignment="Center" Margin="94,150,0,0" VerticalAlignment="Center" Width="100" Height="50" Click="NextClicked"/>
+        <Label x:Name="lblExchange" Content="Currency Exchange"  VerticalAlignment="Top" VerticalContentAlignment="Center" FontSize="24" FontFamily="Modern No. 20" Background="LightSteelBlue" Margin="0,0,0,270" />
+        
     </Grid>
 </Window>

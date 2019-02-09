@@ -7,9 +7,12 @@ namespace Currency_Converter_App
     /// </summary>
     public partial class MainWindow : Window
     {
+
         public MainWindow()
         {
             InitializeComponent();
+
+
         }
         //Open the registration window
         private void BtnSignUp_Click(object sender, RoutedEventArgs e)
@@ -19,11 +22,10 @@ namespace Currency_Converter_App
             this.Close(); // close the current form.
         }
 
-        private void BtnSignIn_Click(object sender, RoutedEventArgs e)
+        private void NextClicked(object sender, RoutedEventArgs e)
         {
-            var signIn = new SignIn(); //create  new sign in form.
-            signIn.Show(); //show the new form.
-            this.Close(); // close the current form.
+            SignInMain page1 = new SignInMain();
+            this.Content = page1;
         }
     }
 }

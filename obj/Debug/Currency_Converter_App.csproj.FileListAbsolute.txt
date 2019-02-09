@@ -15,5 +15,5 @@ C:\Users\s00182038\Desktop\FOOP\Assesment FOOP 202\Currency_Converter_App\obj\De
 C:\Users\s00182038\Desktop\FOOP\Assesment FOOP 202\Currency_Converter_App\obj\Debug\Currency_Converter_App.pdb
 C:\Users\s00182038\Desktop\FOOP\Assesment FOOP 202\Currency_Converter_App\obj\Debug\Registration.g.cs
 C:\Users\s00182038\Desktop\FOOP\Assesment FOOP 202\Currency_Converter_App\obj\Debug\Registration.baml
-C:\Users\s00182038\Desktop\FOOP\Assesment FOOP 202\Currency_Converter_App\obj\Debug\SignIn.g.cs
-C:\Users\s00182038\Desktop\FOOP\Assesment FOOP 202\Currency_Converter_App\obj\Debug\SignIn.baml
+C:\Users\s00182038\Desktop\FOOP\Assesment FOOP 202\Currency_Converter_App\obj\Debug\SignInMain.g.cs
+C:\Users\s00182038\Desktop\FOOP\Assesment FOOP 202\Currency_Converter_App\obj\Debug\SignInMain.baml
