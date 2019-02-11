@@ -5,9 +5,9 @@
       xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
       xmlns:local="clr-namespace:Currency_Converter_App"
       
-
+ 
       mc:Ignorable="d" 
-      d:DesignHeight="600" d:DesignWidth="850" FontSize="14" Background="White" Margin="0,80,0,0"
+      d:DesignHeight="500" d:DesignWidth="900"  FontSize="14" Background="White" Margin="0,80,0,0"
       Title="SignInMain">
 
 

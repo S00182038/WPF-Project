@@ -4,21 +4,61 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Currency_Converter_App"
-        mc:Ignorable="d"
+         xmlns:loadin="clr-namespace:LoadingIndicators.WPF;assembly=LoadingIndicators.WPF"
+        Title="Currency Converter"
+        Width="900"
+        Height="680"
+        Background="White" Loaded="Currency_Convert_Loaded">
 
-        Title="Currency Convert" Height="600" Width="800" FontSize="14">
-    <Window.Background>
-        <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
-            <GradientStop Color="Black" Offset="0"/>
-            <GradientStop Color="White" Offset="1"/>
-        </LinearGradientBrush>
-    </Window.Background>
- 
+    <Window.Resources>
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+                <ResourceDictionary Source="pack://application:,,,/LoadingIndicators.WPF;component/Styles/LoadingWave.xaml"/>
+                <ResourceDictionary Source="pack://application:,,,/LoadingIndicators.WPF;component/Styles/LoadingThreeDots.xaml"/>
+                <ResourceDictionary Source="pack://application:,,,/LoadingIndicators.WPF;component/Styles/LoadingFlipPlane.xaml"/>
+                <ResourceDictionary Source="pack://application:,,,/LoadingIndicators.WPF;component/Styles/LoadingPulse.xaml"/>
+                <ResourceDictionary Source="pack://application:,,,/LoadingIndicators.WPF;component/Styles/LoadingDoubleBounce.xaml"/>
+            </ResourceDictionary.MergedDictionaries>
+        </ResourceDictionary>
+    </Window.Resources>
+
     <Grid>
 
-        <Button x:Name="btnSignUp" Content="Sign Up" HorizontalAlignment="Center" Margin="94,10,0,0"  VerticalAlignment="Center" Width="100" Height="50" Background="#FFDDDDDD" Click="BtnSignUp_Click" />
-        <Button x:Name="Next" Content="Next" HorizontalAlignment="Center" Margin="94,150,0,0" VerticalAlignment="Center" Width="100" Height="50" Click="NextClicked"/>
-        <Label x:Name="lblExchange" Content="Currency Exchange"  VerticalAlignment="Top" VerticalContentAlignment="Center" FontSize="24" FontFamily="Modern No. 20" Background="LightSteelBlue" Margin="0,0,0,270" />
-        
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+
+        </Grid.RowDefinitions>
+        <Label Grid.Column="0" Grid.Row="0" Height="60" VerticalAlignment="Top" HorizontalContentAlignment="Center" Content="Currency Converter" FontFamily="Courier New, Courier, monospace" FontSize="30"  BorderBrush="Black" BorderThickness="5"  Grid.ColumnSpan="3" Background="#5565E9"/>
+
+        <loadin:LoadingIndicator x:Name="ldIndicatior" Grid.Column="1" Grid.Row="1" SpeedRatio="{Binding SpeedRatio}" IsActive="{Binding IsArcsActive}" Style="{DynamicResource LoadingIndicatorArcsStyle}" Foreground="#CC456BD3" FontSize="11">
+
+            <!--Style="{DynamicResource LoadingIndicatorWaveStyle}"-->
+        </loadin:LoadingIndicator>
+
+        <Grid Grid.Row="3" Grid.ColumnSpan="3">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+            </Grid.ColumnDefinitions>
+            <TextBlock Grid.Column="0" Text="SpeedRatio" HorizontalAlignment="Stretch" VerticalAlignment="Bottom"/>
+            <Slider Grid.Column="1" Minimum="0.1" Maximum="3.0" HorizontalAlignment="Stretch" VerticalAlignment="Bottom" Value="{Binding SpeedRatio}"/>
+            <TextBlock Grid.Column="2" Text="{Binding SpeedRatioText}"/>
+
+        </Grid>
+        <!--<Grid.Background>
+            <ImageBrush ImageSource="C:\Users\s00182038\Desktop\FOOP\Assesment FOOP 202\Currency_Converter_App\img\exImg.jpg"/>
+        </Grid.Background>-->
+
+        <TextBlock Grid.Column="1" Grid.Row="1" Text="Aplication Loading" VerticalAlignment="Bottom" HorizontalAlignment="Center" />
+
     </Grid>
+
 </Window>
