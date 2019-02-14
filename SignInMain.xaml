@@ -4,10 +4,10 @@
       xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
       xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
       xmlns:local="clr-namespace:Currency_Converter_App"
-      
- 
       mc:Ignorable="d" 
-      d:DesignHeight="500" d:DesignWidth="900"  FontSize="14" Background="White" Margin="0,80,0,0"
+  Height="650"
+     Width="1100"
+      FontSize="14" Background="White" 
       Title="SignInMain">
 
 
@@ -34,15 +34,14 @@
             button  
         </TextBlock>
 
-
+        
         <TextBlock Height="23" HorizontalAlignment="Left" Margin="60,26,3,0" Name="textBlock1" Text="Email" VerticalAlignment="Top" Width="50" Grid.Row="1" Grid.Column="1"/>
         <TextBlock Height="23" HorizontalAlignment="Left" Margin="60,75,0,0" Name="textBlock2" Text="Password" VerticalAlignment="Top" Width="70" Grid.Row="1" Grid.Column="1"/>
         <TextBox Height="23" HorizontalAlignment="Left" Margin="60,48,0,0" Name="textBoxEmail" VerticalAlignment="Top" Width="207" Grid.Row="1" Grid.Column="1" />
         <PasswordBox Height="23" HorizontalAlignment="Left" Margin="60,99,0,0" Name="passwordBox1" VerticalAlignment="Top" Width="207" Grid.Row="1" Grid.Column="1" />
         <Button Content="Login" Height="23" HorizontalAlignment="Left" Margin="60,143,0,0" Name="button1" VerticalAlignment="Top" Width="104" Click="SignIn_Click" Grid.Row="1" Grid.Column="1" />
         <TextBlock Height="23" HorizontalAlignment="Left" x:Name ="errormessage" VerticalAlignment="Top" Width="247" Margin="60,249,0,0"  OpacityMask="Crimson" Foreground="#FFE5572C" Grid.Row="1" Grid.Column="1" />
-        <Label Content="Currency Converter" FontFamily="Courier New, Courier, monospace" FontSize="40" HorizontalContentAlignment="Center" BorderBrush="Black" BorderThickness="5" Margin="0,-77,0,0" VerticalAlignment="Top" Grid.ColumnSpan="3" Width="800" Height="72" Background="#5565E9"/>
-
+        
         <Grid.Background>
             <ImageBrush ImageSource="C:\Users\s00182038\Desktop\FOOP\Assesment FOOP 202\Currency_Converter_App\img\exImg.jpg"/>
         </Grid.Background>

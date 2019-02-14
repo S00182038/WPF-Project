@@ -1,9 +1,4 @@
-﻿using LoadingIndicators.WPF;
-using System;
-using System.ComponentModel;
-using System.Windows;
-using System.Windows.Input;
-using System.Windows.Threading;
+﻿using System.Windows;
 
 namespace Currency_Converter_App
 {
@@ -14,93 +9,53 @@ namespace Currency_Converter_App
     {
         // Constructors
 
+        //public MainWindow()
+        //{
+        //    InitializeComponent();
+        //}
+
+        ////loading next page automaticly after specified time
+        //private void Currency_Convert_Loaded(object sender, RoutedEventArgs e)
+        //{
+        //    //set timer
+        //    DispatcherTimer dt = new DispatcherTimer();
+        //    dt.Tick += Dt_Tick; ;
+        //    dt.Interval = new TimeSpan(0, 0, 10);
+        //    dt.Start();
+        //}
+
+        //private void Dt_Tick(object sender, EventArgs e)
+        //{
+        //    navFrame.NavigationService.Navigate(new Uri("SignInMain.xaml", UriKind.Relative));
+        //}
         public MainWindow()
         {
-            this.ViewModel = new MainWindowViewModel();
             InitializeComponent();
-        }
-        #region loading indicator
-        private MainWindowViewModel ViewModel
-        {
-            get { return (DataContext as MainWindowViewModel); }
-            set { DataContext = value; }
+            //Navigate(typeof(SignInMain));
         }
 
-        // Handlers
-        private void LoadingIndicator_PreviewMouseDoubleClick(object sender, MouseButtonEventArgs e)
-        {
-            LoadingIndicator li = (LoadingIndicator)sender;
+        //private void Button_Click(object sender, RoutedEventArgs e)
+        //{
+        //     btn = (Button)e.OriginalSource;
+        //    Navigate(btn.Tag as Type);
+        //}
 
-            if (li.SpeedRatio == 1.0)
-            {
-                li.SpeedRatio = 0.3;
-            }
-            else
-            {
-                li.SpeedRatio = 1.0;
-            }
-        }
-        // Classes
-        class MainWindowViewModel : INotifyPropertyChanged
-        {
-            // Variables
-            double speedratio;
-
-            // Properties
-            public double SpeedRatio
-            {
-                get { return speedratio; }
-                set
-                {
-                    if (speedratio != value)
-                    {
-                        speedratio = value;
-                        OnPropertyChanged("SpeedRatio");
-                        OnPropertyChanged("SpeedRatioText");
-                    }
-                }
-            }
-            public string SpeedRatioText
-            {
-                get { return this.SpeedRatio.ToString(); }
-            }
-
-            // Events
-            public event PropertyChangedEventHandler PropertyChanged;
-
-            // Protected
-            protected void OnPropertyChanged(string propertyname)
-            {
-                if (this.PropertyChanged != null)
-                {
-                    this.PropertyChanged(this, new PropertyChangedEventArgs(propertyname));
-                }
-            }
-
-            // Constructors
-            public MainWindowViewModel()
-            {
-                this.SpeedRatio = 1.0;
-
-            }
-
-        }
-        #endregion
-        //loading next page automaticly after specified time
-        private void Currency_Convert_Loaded(object sender, RoutedEventArgs e)
-        {
-            //set timer
-            DispatcherTimer dt = new DispatcherTimer();
-            dt.Tick += Dt_Tick; ;
-            dt.Interval = new TimeSpan(0, 0, 10);
-            dt.Start();
-        }
-
-        private void Dt_Tick(object sender, EventArgs e)
-        {
-            SignInMain page1 = new SignInMain();
-            this.Content = page1;
-        }
+        //private void Navigate(Type viewType)
+        //{
+        //    UserControl uc;
+        //    if (Views.ContainsKey(viewType))
+        //    {
+        //        uc = Views[viewType];
+        //    }
+        //    else
+        //    {
+        //        uc = (UserControl)Activator.CreateInstance(viewType);
+        //        Views[viewType] = uc;
+        //    }
+        //    MyContentControl.Content = uc;
+        //}
+        //private Dictionary<Type, UserControl> Views = new Dictionary<Type, UserControl>();
     }
+}
 
 }
